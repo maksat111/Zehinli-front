@@ -10,8 +10,7 @@ import algap from '../../img/algap.png';
 
 const Footer = () => {
     return (
-        <motion.footer initial={{ x: -1000 }}
-            animate={{ x: [20, 50, 0, -70, 40] }}>
+        <motion.footer initial={{ y: 100, opacity: 0.3 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
             <div className='grid grid-cols-3 my-8vh w-80vw'>
                 <Logo />
                 <div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import phone from '../../img/phone.png';
+import leaderboard from '../../img/leaderboard.png';
 import DownloadButton from '../components/button';
 import googlePlay from '../../img/googlePlay.png';
 import appStore from '../../img/appStore.png';
@@ -16,9 +17,9 @@ const Download = () => {
                         <DownloadButton icon={appStore} alt={'App Store'} />
                     </div>
                 </motion.div>
-                <div className='flex flex-row h-50vh w-[47vw]'>
-                    <motion.img initial={{ rotate: 45, scale: 1.6, y: 200, x: -200 }} whileInView={{ rotate: 0, y: 0, x: 0, scale: 1 }} transition={{ duration: 0.8 }} className='relative h-[81vh] bottom-[22vh]' src={phone} alt='Phone' />
-                    <motion.img initial={{ rotate: -45, scale: 1.6, y: 200, x: 200 }} whileInView={{ rotate: 0, y: 0, x: 0, scale: 1 }} transition={{ duration: 0.8 }} className='relative h-[81vh] bottom-[14vh] right-9vw' src={phone} alt='Phone' />
+                <div className='flex gap-[-100px] h-50vh w-[47vw]'>
+                    <motion.img initial={{ rotate: 45, scale: 1.6, y: 200, x: -200 }} whileInView={{ rotate: 0, y: 0, x: 0, scale: 1 }} transition={{ duration: 0.8 }} className='relative h-[81vh]' src={phone} alt='Phone' />
+                    <motion.img initial={{ rotate: -45, scale: 1.6, y: 200, x: 200 }} whileInView={{ rotate: 0, y: 0, x: 0, scale: 1 }} transition={{ duration: 0.8 }} className='relative z-2 h-[81vh]' src={leaderboard} alt='Phone' />
                 </div>
             </motion.div>
         </div>

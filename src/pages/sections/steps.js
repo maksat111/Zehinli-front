@@ -4,8 +4,6 @@ import StepCard from '../components/steps';
 import raketa from '../../img/raketa.png';
 import question from '../../img/question.png';
 import kubok from '../../img/kubok.png';
-import icon1 from '../../img/1.png';
-import icon2 from '../../img/2.png';
 
 const Steps = () => {
     return (
