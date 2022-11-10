@@ -8,13 +8,13 @@ import Footer from './sections/footer';
 
 const HomePage = () => {
     return (
-        <div className='px-4vw py-3vh'>
+        <div className='px-3 py-2 sm:px-3vw py-2vh'>
             <Navbar />
             <Welcome />
-            <Steps />
-            <Prizes />
-            <Download />
-            <Footer />
+            {/* <Steps /> */}
+            {/* <Prizes /> */}
+            {/* <Download /> */}
+            {/* <Footer /> */}
         </div>
     )
 }
