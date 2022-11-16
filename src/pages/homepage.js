@@ -14,7 +14,7 @@ const HomePage = () => {
             <Steps />
             <Prizes />
             <Download />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
