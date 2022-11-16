@@ -41,10 +41,11 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex flex-wrap justify-between items-center h-10vh w-[94vw]'>
+            <nav className='flex flex-wrap justify-between items-center px-4 py-4 h-10vh w-[94vw]'>
                 <div className='flex flex-wrap items-center'>
                     <Logo />
                     <div className='hidden md:flex'>
+                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/winners'>Ýeňijiler</a>
                         <a className='mr-3vw  font-poppins font-medium text-new-color hover:text-customGrey' href='#about'>Bäsleşik barada</a>
                         <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#prizes'>Artykmaçlyklary</a>
                         <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#download'>Ýüklemek</a>
