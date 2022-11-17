@@ -67,7 +67,7 @@ const Navbar = () => {
                 </div>
             </nav >
             <div className={`flex flex-col transition-opacity absolute w-[25rem] bg-white text-center right-0 py-6 gap-2 md:hidden ${hamburger ? '' : 'hidden'}`}>
-                <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#about'>Bäsleşik barada</a>
+                <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#about'>Bäsleşik barada</a>
                 <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#prizes'>Artykmaçlyklary</a>
                 <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#download'>Ýüklemek</a>
             </div>

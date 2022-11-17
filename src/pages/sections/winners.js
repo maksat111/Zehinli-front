@@ -6,10 +6,10 @@ function Winners() {
     return (
         <div>
             <h2>Ýeňijiler sanawy</h2>
-            <div className='bg-red'>
-                <div>
+            <div className='flex flex-row'>
+                <div className='w-25vw'>
                     <img src={winners}></img>
-                    <div>
+                    <div className='flex justify-between'>
                         <p>Şugün</p>
                         <p>Hepdelik</p>
                         <p>Ussat</p>
@@ -21,8 +21,8 @@ function Winners() {
                     </div>
                     <button>Meni görkez</button>
                 </div>
-                <div>
-
+                <div className='w-65vw'>
+                    <p>table</p>
                 </div>
             </div>
         </div>
