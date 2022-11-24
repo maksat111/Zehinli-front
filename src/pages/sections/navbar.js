@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex flex-wrap justify-between items-center px-4 py-4 h-10vh w-[94vw]'>
+            <nav className='flex flex-wrap justify-between items-center px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-10 h-10vh w-full'>
                 <div className='flex flex-wrap items-center'>
                     <Logo />
                     <div className='hidden md:flex'>

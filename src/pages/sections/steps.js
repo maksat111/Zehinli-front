@@ -9,8 +9,8 @@ import icon2 from '../../img/2.png';
 
 const Steps = () => {
     return (
-        <div id='about' className='h-50rem lg:h-100vh'>
-            <div className='flex flex-col text-center pt-[120px] pb-[140px]'>
+        <div id='about' className='h-50rem lg:h-90vh'>
+            <div className='flex flex-col text-center pt-[100px] pb-[140px]'>
                 <motion.p initial={{ x: -200 }} whileInView={{ x: 0 }} transition={{ duration: 0.7 }} className='font-normal font-poppins text-customGrey text-new-color py-[10px]'>Bäsleşik nähili geçýär?</motion.p>
                 <motion.h2 initial={{ x: -200 }} whileInView={{ x: 0 }} transition={{ duration: 1 }} className='font-extrabold font-lato text-5xl text-new-color px-4'>Oýun 3 basgançakdan durýar</motion.h2>
             </div>

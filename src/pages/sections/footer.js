@@ -11,7 +11,7 @@ import algap from '../../img/algap.png';
 const Footer = () => {
     return (
         <motion.footer initial={{ y: 100, opacity: 0.3 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }} className='px-4'>
-            <div className='flex flex-col gap-6 md:grid md:grid-cols-3 my-7 lg:my-8vh w-80vw'>
+            <div className='flex flex-col gap-6 md:grid md:grid-cols-3 my-7 sm:px-6 sm:py-6 md:px-8 lg:px-10 lg:my-8vh w-80vw'>
                 <Logo />
                 <div>
                     <FooterItem content={'Biz barada'} />
