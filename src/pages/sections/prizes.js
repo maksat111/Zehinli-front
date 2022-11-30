@@ -12,8 +12,8 @@ const Prizes = () => {
     return (
         <div id='prizes' className='flex flex-col items-center h-[180vh] sm:h-[175vh] lg:grid lg:grid-cols-2 lg:h-90vh'>
             <motion.div initial={{ x: -200, y: 200, scale: 0.3 }} whileInView={{ x: 0, y: 0, scale: 1 }} transition={{ duration: 0.8 }} className='flex h-80vh w-80vw justify-center items-center content center lg:w-[47vw]'>
-                <img className='relative w-full z-1 h-[32rem] min-w-[19rem] max-w-[22rem] right-[-4rem] lg:h-[30rem] lg:bottom-[10rem]' src={phoneZehin} alt='Phone' />
-                <img className='relative w-full z-2 h-[26rem] min-w-[19rem] right-[8rem] bottom-3 lg:h-[60vh] lg:min-w-[20rem] lg:right-[9.5rem] lg:bottom-[1rem]' src={prizes} alt=' prizes' />
+                <img className='relative w-full z-1 h-[32rem] min-w-[19rem] max-w-[22rem] right-[-4rem] md:h-[36rem] md:min-w-[23.5rem] md:right-[-6rem] lg:right-[-5rem] lg:h-[35rem] lg:min-w-[23rem] lg:bottom-0' src={phoneZehin} alt='Phone' />
+                <img className='relative w-full z-2 h-[26rem] min-w-[19rem] right-[8rem] bottom-3 md:h-[29rem] md:min-w-[25rem] md:right-[11rem] lg:h-[28rem] lg:min-w-[25rem] lg:right-[13rem] lg:bottom-[1rem]' src={prizes} alt=' prizes' />
             </motion.div>
             <div className='flex flex-col justify-center items-center mx-auto px-auto items-start w-80vw lg:w-[47vw] h-80vh'>
                 <motion.p initial={{ x: 200, y: 200, scale: 0 }} whileInView={{ x: 0, y: 0, scale: 1 }} transition={{ duration: 0.8 }} className='font-[400] font-poppins text-customGrey text-[17px]'>Bäsleşige näme üçin gatnaşmaly?</motion.p>

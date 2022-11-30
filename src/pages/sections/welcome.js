@@ -7,6 +7,7 @@ import phone from '../../img/phone.png';
 import prizes from '../../img/prizes.png';
 import DownloadButton from '../components/button';
 import { widthResizer } from '../utils/sizeTracker';
+import logoBig from '../../img/logoBig.png';
 
 const Welcome = () => {
     widthResizer()
@@ -14,14 +15,13 @@ const Welcome = () => {
         <div className='container sm:flex sm:flex-col lg:flex-row h-fit-content w-[94vw] lg:h-[87vh]'>
             {/* Left side  */}
             <div className='flex flex-col lg:w-[48vw]'>
-                <div className='flex flex-col text-center align-center justify-center h-50vh lg:h-70vh lg:mt-[80px]'>
-                    <motion.h1 initial={{ x: -100 }} animate={{ x: 0 }} transition={{ duration: 0.5 }} className='uppercase font-ubuntu h-auto font-extrabold text-[35px] sm:text-[45px] sm:w-[92vw] lg:w-50vw text-new-color mb-[-10px]'>Zehinli Bäsleşik</motion.h1>
-                    <motion.h2 initial={{ x: -150 }} animate={{ x: 0 }} transition={{ duration: 0.7 }} className='font-extrabold font-ubuntu h-auto tracking-wide sm:w-90vw text-[18px] sm:text-[23px] lg:w-50vw md:text-[27px] text-new-color mb-[50px]'>zehiniňi artdyr we baýraklar gazan!</motion.h2>
-                    <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 0.9 }} className='text-new-color px-4 text-[16px] h-auto w-90vw sm:text-[20px] lg:w-30vw mb-[50px]'>Özüňize islendik amatly bolan ýerde bilim başarnyklaryňyzy kämilleşdiriň we islän baýragyňyzy gazanyň!</motion.p>
+                <div className='flex flex-col text-center align-center justify-center h-[16rem] sm:h-[18rem] md:h-[20rem] md:my-[7rem] my-[5rem] lg:h-70vh lg:mt-[80px] lg:justify-start lg:text-start'>
+                    <motion.img initial={{ x: -150 }} animate={{ x: 0 }} transition={{ duration: 0.7 }} className='w-60vw mx-auto my-[3rem] sm:w-[50vw] md:w-[45vw] lg:ml-0 lg:w-[21rem] ' src={logoBig} />
+                    <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 0.9 }} className='text-new-color px-4 text-[16px] h-auto w-90vw sm:text-[20px] lg:w-35vw mb-[50px] xl:w-[40vw]'>Özüňize islendik amatly bolan ýerde bilim başarnyklaryňyzy kämilleşdiriň we islän baýragyňyzy gazanyň!</motion.p>
                     <motion.div initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 1.1 }} className='flex flex-row w-90vw justify-around h-auto content-center lg:gap-8 lg:justify-start '>
                         <DownloadButton icon={googlePlay} alt={'Google Play'} />
                         <DownloadButton icon={appStore} alt={'App Store'} />
-                        <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className='relative lg:hidden h-[3.5rem] w-[3rem] sm:h-[4rem] sm:w-[4rem] w-10vh' src={barcode} alt='Barcode' />
+                        <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className='relative lg:hidden h-[3.5rem] w-[3.5rem] sm:h-[4rem] sm:w-[4rem] w-10vh' src={barcode} alt='Barcode' />
                     </motion.div>
                 </div>
                 <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className='hidden lg:flex lg:relative h-10vh w-10vh mb-[50px]' src={barcode} alt='Barcode' />

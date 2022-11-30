@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const PrizeCard = ({ icon, prizeHeader, prizeDescription }) => {
     return (
-        <motion.div initial={{ opacity: 0.1 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className='flex flex-row w-80vw lg:w-50vw lg:flex lg:flex-wrap gap-8 py-4'>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className='flex flex-row w-80vw lg:w-50vw lg:flex lg:flex-wrap gap-8 py-4'>
             <div className='flex justify-center content-denter shadow-icons px-5 py-5 bg-white w-16 h-16 rounded-xl shadow-icons'>
                 <img src={icon} alt='Icon1' />
             </div>

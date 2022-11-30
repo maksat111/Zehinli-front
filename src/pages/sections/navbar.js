@@ -15,8 +15,10 @@ const Navbar = () => {
         setOpen(!open);
     }
 
-    const handleChoose = (item) => {
-        setCurrentLanguage(item);
+    const handleChoose = (e) => {
+        const text = e.target.getAttribute('name');
+        const index = e.target.getAttribute('index');
+        setCurrentLanguage({ text, index });
         setOpen(false)
     }
 
@@ -46,9 +48,9 @@ const Navbar = () => {
                     <Logo />
                     <div className='hidden md:flex'>
                         <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/winners'>Ýeňijiler</a>
-                        <a className='mr-3vw  font-poppins font-medium text-new-color hover:text-customGrey' href='#about'>Bäsleşik barada</a>
-                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#prizes'>Artykmaçlyklary</a>
-                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#download'>Ýüklemek</a>
+                        <a className='mr-3vw  font-poppins font-medium text-new-color hover:text-customGrey' href='/#about'>Bäsleşik barada</a>
+                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#prizes'>Artykmaçlyklary</a>
+                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#download'>Ýüklemek</a>
                     </div>
                 </div>
                 <div className='flex flex-row gap-8'>
@@ -57,7 +59,7 @@ const Navbar = () => {
                         <div className={`flex flex-col absolute bg-white py-3 px-2 mt-7 mr-5 rounded-lg z-2 align-center shadow-icons ${open ? '' : 'hidden'}`}>
                             {languageData.map(item => {
                                 if (item.index !== currentLanguage.index) {
-                                    return <p key={item.index} className='cursor-pointer py-1 px-5 hover:bg-gray-100 rounded-lg' index={item.index} onClick={() => handleChoose(item)}>{item.text}</p>
+                                    return <p key={item.index} className='cursor-pointer py-1 px-5 hover:bg-gray-100 rounded-lg' index={item.index} name={item.text} onClick={handleChoose}>{item.text}</p>
                                 }
                             })}
                         </div>
