@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import WinnerItem from '../components/winnerItem';
+import { AiOutlineRight } from 'react-icons/ai';
 import winners from '../../img/winners.png';
 import photo from '../../img/3x4.jpg';
 import gyzyl from '../../img/gyzyl.png';
@@ -20,9 +21,9 @@ function Winners() {
     return (
         <div className='px-3vw'>
             <h2 className='w-90vw text-center text-new-color text-5xl font-extrabold mt-5 mb-8'>Ýeňijiler sanawy</h2>
-            <div className='flex flex-row'>
+            <div className='flex flex-col lg:flex-row'>
                 {/* stage */}
-                <div className='w-[22vw] bg-white pb-5 rounded-t-[30px] rounded-b-[15px] h-[40rem]'>
+                <div className='lg:w-[22vw] lg:min-w-[20rem] bg-white pb-5 rounded-t-[30px] rounded-b-[15px] h-[40rem]'>
                     <div className='flex justify-center w-full h-[17rem] bg-gradient-to-r from-[#4F9AEB] to-[#007BFF] rounded-[30px]'>
                         <img className='rounded-[30px] w-22vw' src={winners} alt='winners' />
                         {/* <img className='relative z-10 w-[3rem] h-[3rem]' src={photo} alt='second' /> */}
@@ -43,13 +44,14 @@ function Winners() {
                 </div>
                 {/* table */}
                 <div className='w-70vw h-[40rem] bg-white ml-5 rounded-[20px] py-5 px-12'>
-                    <div className='flex flex-row'>
-                        <p className='text-[#bfc0c5] w-[45vw] pl-2 font-poppins font-normal text-[1rem]'>Oýunçy</p>
+                    <div className='flex flex-row justify-between'>
+                        <p className='text-[#bfc0c5] w-[42vw] pl-2 font-poppins font-normal text-[1rem]'>Oýunçy</p>
                         <p className='text-[#bfc0c5] w-[2.5rem] font-poppins font-normal text-[1rem]'>Orun</p>
+                        <AiOutlineRight className='text-white' />
                     </div>
 
                     <WinnerItem gamer={'Jennet Babayewa'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
+                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={gyzyl} />
                     <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
                     <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
                     <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />

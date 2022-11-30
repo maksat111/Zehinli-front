@@ -1,15 +1,13 @@
-import { React, useState } from 'react';
+import { React, useContext, useState } from 'react';
 import Logo from '../components/logo';
 import arrowDown from '../../img/arrow-down.png';
 import { GoThreeBars, GoX } from "react-icons/go";
+import { LanguageContext } from '../../context/context';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [hamburger, setHamburger] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState({
-        text: "TM",
-        index: 1,
-    });
+    const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
 
     const handleOpen = () => {
         setOpen(!open);
@@ -17,7 +15,7 @@ const Navbar = () => {
 
     const handleChoose = (e) => {
         const text = e.target.getAttribute('name');
-        const index = e.target.getAttribute('index');
+        const index = parseInt(e.target.getAttribute('index'));
         setCurrentLanguage({ text, index });
         setOpen(false)
     }
@@ -36,6 +34,12 @@ const Navbar = () => {
             index: 3,
         },
     ]
+
+    const navbarData = {
+        TM: {
+
+        }
+    }
 
     const handleHamburger = () => {
         setHamburger(!hamburger);
