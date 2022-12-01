@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import { motion } from 'framer-motion';
 import appStore from '../../img/appStore.png';
 import googlePlay from '../../img/googlePlay.png';
@@ -8,16 +8,24 @@ import prizes from '../../img/prizes.png';
 import DownloadButton from '../components/button';
 import { widthResizer } from '../utils/sizeTracker';
 import logoBig from '../../img/logoBig.png';
+import { LanguageContext } from '../../context/context';
 
 const Welcome = () => {
-    widthResizer()
+    const { currentLanguage } = useContext(LanguageContext);
+    const content = {
+        tm: 'Özüňize islendik amatly bolan ýerde bilim başarnyklaryňyzy kämilleşdiriň we islän baýragyňyzy gazanyň!',
+        en: 'Improve your educational skills at your convenience and win the prize of your choice!',
+        ru: 'Совершенствуйте свои образовательные навыки в удобное для вас время и выиграйте приз по вашему выбору!'
+    }
     return (
         <div className='container sm:flex sm:flex-col lg:flex-row h-fit-content w-[94vw] lg:h-[87vh]'>
             {/* Left side  */}
             <div className='flex flex-col lg:w-[48vw]'>
                 <div className='flex flex-col text-center align-center justify-center h-[16rem] sm:h-[18rem] md:h-[20rem] md:my-[7rem] my-[5rem] lg:h-70vh lg:mt-[80px] lg:justify-start lg:text-start'>
                     <motion.img initial={{ x: -150 }} animate={{ x: 0 }} transition={{ duration: 0.7 }} className='w-60vw mx-auto my-[3rem] sm:w-[50vw] md:w-[45vw] lg:ml-0 lg:w-[21rem] ' src={logoBig} />
-                    <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 0.9 }} className='text-new-color px-4 text-[16px] h-auto w-90vw sm:text-[20px] lg:w-35vw mb-[50px] xl:w-[40vw]'>Özüňize islendik amatly bolan ýerde bilim başarnyklaryňyzy kämilleşdiriň we islän baýragyňyzy gazanyň!</motion.p>
+                    <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 0.9 }} className='text-new-color px-4 text-[16px] h-auto w-90vw sm:text-[20px] lg:w-35vw mb-[50px] xl:w-[40vw]'>
+                        {currentLanguage.text == 'TM' ? content.tm : (currentLanguage.text == 'EN' ? content.en : content.ru)}
+                    </motion.p>
                     <motion.div initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 1.1 }} className='flex flex-row w-90vw justify-around h-auto content-center lg:gap-8 lg:justify-start '>
                         <DownloadButton icon={googlePlay} alt={'Google Play'} />
                         <DownloadButton icon={appStore} alt={'App Store'} />

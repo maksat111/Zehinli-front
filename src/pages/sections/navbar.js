@@ -35,11 +35,32 @@ const Navbar = () => {
         },
     ]
 
-    const navbarData = {
-        TM: {
-
-        }
-    }
+    const navbarData = [
+        {
+            tm: 'Ýeňijiler',
+            ru: 'Победители',
+            en: 'Winners',
+            href: '/winners'
+        },
+        {
+            tm: 'Bäsleşik barada',
+            ru: 'О конкурсе',
+            en: 'About the competition',
+            href: '/#about'
+        },
+        {
+            tm: 'Artykmaçlyklary',
+            ru: 'Эксцессы',
+            en: 'Excesses',
+            href: '/#prizes'
+        },
+        {
+            tm: 'Ýüklemek',
+            ru: 'Загрузить',
+            en: 'Download',
+            href: '/#download'
+        },
+    ];
 
     const handleHamburger = () => {
         setHamburger(!hamburger);
@@ -51,10 +72,14 @@ const Navbar = () => {
                 <div className='flex flex-wrap items-center'>
                     <Logo />
                     <div className='hidden md:flex'>
-                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/winners'>Ýeňijiler</a>
+                        {/* <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/winners'>Ýeňijiler</a>
                         <a className='mr-3vw  font-poppins font-medium text-new-color hover:text-customGrey' href='/#about'>Bäsleşik barada</a>
-                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#prizes'>Artykmaçlyklary</a>
-                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#download'>Ýüklemek</a>
+                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#prizes'>Artykmaçlyklary</a> */}
+
+                        {navbarData.map((item) => {
+                            return <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href={item.href}>{currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}</a>
+                        })}
+
                     </div>
                 </div>
                 <div className='flex flex-row gap-8'>
