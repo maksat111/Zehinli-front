@@ -105,8 +105,8 @@ function Winners() {
                     </div>
                     <div className='flex justify-between font-poppins py-5 px-4 text-[15px] font-normal'>
                         {
-                            content.card.time.map((item) => {
-                                return <p className={`font-poppins cursor-pointer font-medium text-new-color text-[16px] px-[1rem] py-[7px] ${liga == item.name ? 'bg-[#d9eafe] rounded-[8px] text-[#4e88d1]' : 'hover:text-[#4e88d1]'}`} onClick={handleLiga} name={item.name}>
+                            content.card.time.map((item, index) => {
+                                return <p key={index} className={`font-poppins cursor-pointer font-medium text-new-color text-[16px] px-[1rem] py-[7px] ${liga == item.name ? 'bg-[#d9eafe] rounded-[8px] text-[#4e88d1]' : 'hover:text-[#4e88d1]'}`} onClick={handleLiga} name={item.name}>
                                     {currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}
                                 </p>
 
@@ -115,8 +115,8 @@ function Winners() {
                     </div>
                     <div className='text-center px-4'>
                         {
-                            content.card.level.map((item) => {
-                                return <p className={`font-poppins cursor-pointer font-medium text-new-color text-[16px] py-[0.9rem] mb-2 ${level == item.name ? 'bg-[#d9eafe] rounded-[12px] text-[#4e88d1]' : 'hover:text-[#4e88d1]'}`} name={item.name} onClick={handleLevel}>
+                            content.card.level.map((item, index) => {
+                                return <p key={index} className={`font-poppins cursor-pointer font-medium text-new-color text-[16px] py-[0.9rem] mb-2 ${level == item.name ? 'bg-[#d9eafe] rounded-[12px] text-[#4e88d1]' : 'hover:text-[#4e88d1]'}`} name={item.name} onClick={handleLevel}>
                                     {currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}
                                 </p>
                             })

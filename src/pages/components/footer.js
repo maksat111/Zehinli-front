@@ -35,8 +35,8 @@ const Footer = () => {
             <div className='flex flex-col gap-6 md:grid md:grid-cols-3 my-7 sm:px-6 sm:py-6 md:px-8 lg:px-10 lg:my-8vh w-80vw'>
                 <Logo />
                 <div>
-                    {content.items.map((item) => {
-                        return <FooterItem content={currentLanguage.text == 'EN' ? item.en : (currentLanguage.text == 'TM' ? item.tm : item.ru)} />
+                    {content.items.map((item, index) => {
+                        return <FooterItem key={index} content={currentLanguage.text == 'EN' ? item.en : (currentLanguage.text == 'TM' ? item.tm : item.ru)} />
                     })}
                 </div>
                 <div>

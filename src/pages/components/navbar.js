@@ -7,7 +7,7 @@ import { LanguageContext } from '../../context/context';
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [hamburger, setHamburger] = useState(false);
-    const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
+    const { currentLanguage, ChangeLanguage } = useContext(LanguageContext);
 
     const handleOpen = () => {
         setOpen(!open);
@@ -16,7 +16,7 @@ const Navbar = () => {
     const handleChoose = (e) => {
         const text = e.target.getAttribute('name');
         const index = parseInt(e.target.getAttribute('index'));
-        setCurrentLanguage({ text, index });
+        ChangeLanguage({ text, index });
         setOpen(false)
     }
 
@@ -37,24 +37,28 @@ const Navbar = () => {
 
     const navbarData = [
         {
+            id: 1,
             tm: 'Ýeňijiler',
             ru: 'Победители',
             en: 'Winners',
             href: '/winners'
         },
         {
+            id: 2,
             tm: 'Bäsleşik barada',
             ru: 'О конкурсе',
             en: 'About the competition',
             href: '/#about'
         },
         {
+            id: 3,
             tm: 'Artykmaçlyklary',
             ru: 'Эксцессы',
             en: 'Excesses',
             href: '/#prizes'
         },
         {
+            id: 4,
             tm: 'Ýüklemek',
             ru: 'Загрузить',
             en: 'Download',
@@ -77,7 +81,9 @@ const Navbar = () => {
                         <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#prizes'>Artykmaçlyklary</a> */}
 
                         {navbarData.map((item) => {
-                            return <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href={item.href}>{currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}</a>
+                            return <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href={item.href} key={item.id}>
+                                {currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}
+                            </a>
                         })}
 
                     </div>

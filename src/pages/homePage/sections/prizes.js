@@ -79,9 +79,10 @@ const Prizes = () => {
                     {currentLanguage.text == 'TM' ? content.secondLine.tm : (currentLanguage.text == 'EN' ? content.secondLine.en : content.secondLine.ru)}
                 </motion.h2>
                 {
-                    content.cards.map((item) => {
+                    content.cards.map((item, index) => {
                         return (
                             <PrizeCard
+                                key={index}
                                 icon={item.icon}
                                 prizeHeader={currentLanguage.text == 'TM' ? item.header.tm : (currentLanguage.text == 'EN' ? item.header.en : item.header.ru)}
                                 prizeDescription={currentLanguage.text == 'TM' ? item.description.tm : (currentLanguage.text == 'EN' ? item.description.en : item.description.ru)}

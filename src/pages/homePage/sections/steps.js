@@ -52,7 +52,7 @@ const Steps = () => {
             },
             {
                 icon: kubok,
-                afterIcon: false,
+                afterIcon: null,
                 header: {
                     tm: 'Baýrakly orunlara mynasyp bol',
                     ru: 'Выиграй призы',
@@ -79,24 +79,25 @@ const Steps = () => {
                 </motion.h2>
             </div>
             <div className='flex flex-col inline-block gap-20 lg:gap-4 items-center lg:flex-row lg:justify-around lg:items-center'>
-                {content.cards.map((item) => {
+                {content.cards.map((item, index) => {
                     let i = 0.2;
                     i += 0.2;
                     return (
                         <>
                             <StepCard
+                                key={index}
                                 icon={item.icon}
                                 rocket={item.icon == raketa}
                                 duration={i}
                                 stepHeader={currentLanguage.text == 'TM' ? item.header.tm : (currentLanguage.text == 'EN' ? item.header.en : item.header.ru)}
                                 stepDescription={currentLanguage.text == 'TM' ? item.description.tm : (currentLanguage.text == 'EN' ? item.description.en : item.description.ru)}
                             />
-                            {item.afterIcon !== false ? <img className='hidden h-5 w-5vw lg:flex' src={item.afterIcon} alt='icon' /> : <></>}
+                            {item.afterIcon !== null ? <img key={Math.floor(Math.random() * 100)} className='hidden h-5 w-5vw lg:flex' src={item.afterIcon} alt='icon' /> : <></>}
                         </>
                     )
                 })}
             </div>
-        </div>
+        </div >
     );
 }
 
