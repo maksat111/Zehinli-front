@@ -3,6 +3,7 @@ import Logo from './logo';
 import arrowDown from '../../img/arrow-down.png';
 import { GoThreeBars, GoX } from "react-icons/go";
 import { LanguageContext } from '../../context/context';
+import Login from './login';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -76,19 +77,17 @@ const Navbar = () => {
                 <div className='flex flex-wrap items-center'>
                     <Logo />
                     <div className='hidden md:flex'>
-                        {/* <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/winners'>Ýeňijiler</a>
-                        <a className='mr-3vw  font-poppins font-medium text-new-color hover:text-customGrey' href='/#about'>Bäsleşik barada</a>
-                        <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='/#prizes'>Artykmaçlyklary</a> */}
-
-                        {navbarData.map((item) => {
-                            return <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href={item.href} key={item.id}>
-                                {currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}
-                            </a>
-                        })}
+                        {
+                            navbarData.map((item) => {
+                                return <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href={item.href} key={item.id}>
+                                    {currentLanguage.text == 'TM' ? item.tm : (currentLanguage.text == 'EN' ? item.en : item.ru)}
+                                </a>
+                            })
+                        }
 
                     </div>
                 </div>
-                <div className='flex flex-row gap-8'>
+                <div className='flex flex-row gap-3 items-center'>
                     <div className='flex flex-col'>
                         <button className='flex inline-flex flex-row ml-8 items-center text-new-color' onClick={handleOpen} >{currentLanguage.text} <img className='ml-[0.8vw]' src={arrowDown} alt='arrow down' /></button>
                         <div className={`flex flex-col absolute bg-white py-3 px-2 mt-7 mr-5 rounded-lg z-2 align-center shadow-icons ${open ? '' : 'hidden'}`}>
@@ -99,6 +98,10 @@ const Navbar = () => {
                             })}
                         </div>
                     </div>
+                    <button className='font-poppins cursor-pointer font-medium text-new-color'>Ulgama gir</button>
+                    <button className='font-poppins cursor-pointer font-medium text-white rounded-[10px] py-1 px-2 bg-gradient-to-r from-[#4F9AEB] to-[#007BFF]'>
+                        Hasap al
+                    </button>
 
                     {!hamburger ? <GoThreeBars className={'md:hidden text-new-color'} size={'30px'} color={'#200E32'} onClick={handleHamburger} /> : <GoX className='md:hidden' size={'30px'} color='#200E32' onClick={handleHamburger} />}
                 </div>
@@ -108,6 +111,7 @@ const Navbar = () => {
                 <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#prizes'>Artykmaçlyklary</a>
                 <a className='mr-3vw font-poppins font-medium text-new-color hover:text-customGrey' href='#download'>Ýüklemek</a>
             </div>
+            {/* <Login /> */}
 
         </>
     );

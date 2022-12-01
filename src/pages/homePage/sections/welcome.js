@@ -38,7 +38,7 @@ const Welcome = () => {
                 <div className='flex rounded-[40px] mt-20 w-[60%] min-w-[13rem] max-w-[17rem] h-[21rem] bg-gradient-to-r from-[#4F9AEB] to-[#007BFF] h-[19rem] sm:w-[65%] md:h-[22rem] md:max-w-[22rem] lg:h-[28rem] lg:min-w-[25rem]'>
                     <motion.img
                         initial={{ x: -200, y: -500, scale: 0.3 }} animate={{ x: 0, y: 0, scale: 1 }} transition={{ duration: 0.5 }}
-                        className='z-1 inline-block relative w-[100%] h-[25rem] min-w-[15rem] max-w-[23rem] sm:min-w-[16rem] right-[7.5rem] bottom-[5rem] md:min-w-[18rem] md:h-[28rem] md:bottom-[6rem] lg:bottom-[18vh] lg:right-[10rem] lg:min-w-[22rem] lg:h-[35rem]'
+                        className=' inline-block relative w-[100%] h-[25rem] min-w-[15rem] max-w-[23rem] sm:min-w-[16rem] right-[7.5rem] bottom-[5rem] md:min-w-[18rem] md:h-[28rem] md:bottom-[6rem] lg:bottom-[18vh] lg:right-[10rem] lg:min-w-[22rem] lg:h-[35rem]'
                         src={phone}
                         alt='Phone'
                     />
