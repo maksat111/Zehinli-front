@@ -1,5 +1,5 @@
 import { React, useContext, useState } from 'react';
-import Logo from '../components/logo';
+import Logo from './logo';
 import arrowDown from '../../img/arrow-down.png';
 import { GoThreeBars, GoX } from "react-icons/go";
 import { LanguageContext } from '../../context/context';

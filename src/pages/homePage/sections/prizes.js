@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import PrizeCard from '../components/prizes';
-import { LanguageContext } from '../../context/context';
-import icon1 from '../../img/icon1.png';
-import icon2 from '../../img/icon2.png';
-import icon3 from '../../img/icon3.png';
-import phoneZehin from '../../img/phoneZehin.png';
-import prizes from '../../img/prizes.png';
+import PrizeCard from '../../components/prizes';
+import { LanguageContext } from '../../../context/context';
+import icon1 from '../../../img/icon1.png';
+import icon2 from '../../../img/icon2.png';
+import icon3 from '../../../img/icon3.png';
+import phoneZehin from '../../../img/phoneZehin.png';
+import prizes from '../../../img/prizes.png';
 
 
 const Prizes = () => {

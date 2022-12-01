@@ -1,14 +1,13 @@
 import { React, useContext } from 'react';
 import { motion } from 'framer-motion';
-import appStore from '../../img/appStore.png';
-import googlePlay from '../../img/googlePlay.png';
-import barcode from '../../img/barcode.png';
-import phone from '../../img/phone.png';
-import prizes from '../../img/prizes.png';
-import DownloadButton from '../components/button';
-import { widthResizer } from '../utils/sizeTracker';
-import logoBig from '../../img/logoBig.png';
-import { LanguageContext } from '../../context/context';
+import appStore from '../../../img/appStore.png';
+import googlePlay from '../../../img/googlePlay.png';
+import barcode from '../../../img/barcode.png';
+import phone from '../../../img/phone.png';
+import prizes from '../../../img/prizes.png';
+import DownloadButton from '../../components/button';
+import logoBig from '../../../img/logoBig.png';
+import { LanguageContext } from '../../../context/context';
 
 const Welcome = () => {
     const { currentLanguage } = useContext(LanguageContext);

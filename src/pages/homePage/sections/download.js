@@ -1,11 +1,11 @@
 import { React, useContext } from 'react';
 import { motion } from 'framer-motion';
-import { LanguageContext } from '../../context/context';
-import phone from '../../img/phone.png';
-import leaderboard from '../../img/leaderboard.png';
-import DownloadButton from '../components/button';
-import googlePlay from '../../img/googlePlay.png';
-import appStore from '../../img/appStore.png';
+import { LanguageContext } from '../../../context/context';
+import phone from '../../../img/phone.png';
+import leaderboard from '../../../img/leaderboard.png';
+import DownloadButton from '../../components/button';
+import googlePlay from '../../../img/googlePlay.png';
+import appStore from '../../../img/appStore.png';
 
 const Download = () => {
     const { currentLanguage } = useContext(LanguageContext);

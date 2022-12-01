@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import { LanguageContext } from '../../context/context';
-import StepCard from '../components/steps';
-import raketa from '../../img/raketa.png';
-import question from '../../img/question.png';
-import kubok from '../../img/kubok.png';
-import icon1 from '../../img/1.png';
-import icon2 from '../../img/2.png';
+import { LanguageContext } from '../../../context/context';
+import StepCard from '../../components/steps';
+import raketa from '../../../img/raketa.png';
+import question from '../../../img/question.png';
+import kubok from '../../../img/kubok.png';
+import icon1 from '../../../img/1.png';
+import icon2 from '../../../img/2.png';
 
 const Steps = () => {
     const { currentLanguage } = useContext(LanguageContext);
