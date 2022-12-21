@@ -44,7 +44,7 @@ const Welcome = () => {
                     />
                     <motion.img
                         initial={{ x: -200, y: -100, scale: 0 }} animate={{ x: 0, y: 0, scale: 1 }} transition={{ delay: 0.2, duration: 0.8 }}
-                        className='z-2 inline-block relative right-[16rem] w-[100%] min-w-[14rem] max-w-[20rem] h-[19rem] sm:min-w-[15rem] sm:h-[20rem] md:min-w-[20rem] md:right-[18rem] lg:h-[25rem] lg:right-[20rem] lg:top-1vh'
+                        className='inline-block relative right-[16rem] w-[100%] min-w-[14rem] max-w-[20rem] h-[19rem] sm:min-w-[15rem] sm:h-[20rem] md:min-w-[20rem] md:right-[18rem] lg:h-[25rem] lg:right-[20rem] lg:top-1vh'
                         src={prizes}
                         alt='Prizes'
                     />

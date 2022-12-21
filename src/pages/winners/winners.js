@@ -98,8 +98,8 @@ function Winners() {
                 {/* stage */}
                 <div className='lg:w-[22vw] lg:min-w-[20rem] bg-white pb-5 rounded-t-[30px] rounded-b-[15px] h-[40rem]'>
                     <div className='flex justify-center w-full h-[17rem] bg-gradient-to-r from-[#4F9AEB] to-[#007BFF] rounded-[30px]'>
-                        <img className='rounded-[30px] w-22vw' src={winners} alt='winners' />
-                        {/* <img className='relative z-10 w-[3rem] h-[3rem]' src={photo} alt='second' /> */}
+                        <img className='relative rounded-[30px] w-22vw' src={winners} alt='winners' />
+                        <img className='relative top-5 left-10 z-10 w-[3rem] h-[3rem]' src={photo} alt='second' />
                         {/* <img src={photo} alt='first' />
                         <img src={photo} alt='third' /> */}
                     </div>
@@ -137,7 +137,6 @@ function Winners() {
                         </p>
                         <AiOutlineRight className='text-white' />
                     </div>
-
                     <WinnerItem gamer={'Jennet Babayewa'} photo={photo} place={2} status={yasyl} />
                     <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={gyzyl} />
                     <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
