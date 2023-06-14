@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Zehinli_front/static/css/main.fc1a8a97.css",
+    "main.css": "/Zehinli_front/static/css/main.c11ece9d.css",
     "main.js": "/Zehinli_front/static/js/main.7f4a89c7.js",
     "static/js/787.ff561bae.chunk.js": "/Zehinli_front/static/js/787.ff561bae.chunk.js",
     "static/media/leaderboard.png": "/Zehinli_front/static/media/leaderboard.11e9e1a2896d7b8ce078.png",
@@ -16,12 +16,12 @@
     "static/media/raketa.png": "/Zehinli_front/static/media/raketa.010a6e43186c4b850733.png",
     "static/media/logoBig.png": "/Zehinli_front/static/media/logoBig.49b594b97e71cc96ee19.png",
     "index.html": "/Zehinli_front/index.html",
-    "main.fc1a8a97.css.map": "/Zehinli_front/static/css/main.fc1a8a97.css.map",
+    "main.c11ece9d.css.map": "/Zehinli_front/static/css/main.c11ece9d.css.map",
     "main.7f4a89c7.js.map": "/Zehinli_front/static/js/main.7f4a89c7.js.map",
     "787.ff561bae.chunk.js.map": "/Zehinli_front/static/js/787.ff561bae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc1a8a97.css",
+    "static/css/main.c11ece9d.css",
     "static/js/main.7f4a89c7.js"
   ]
 }
