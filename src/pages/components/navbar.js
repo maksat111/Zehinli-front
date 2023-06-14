@@ -80,16 +80,16 @@ const Navbar = () => {
                 href: '/#download'
             },
         ],
-        signIn: {
-            tm: 'Ulgama gir',
-            en: 'Sign In',
-            ru: 'Войти'
-        },
-        register: {
-            tm: 'Hasap al',
-            en: 'Register',
-            ru: 'Зарегистрироваться'
-        }
+        // signIn: {
+        //     tm: 'Ulgama gir',
+        //     en: 'Sign In',
+        //     ru: 'Войти'
+        // },
+        // register: {
+        //     tm: 'Hasap al',
+        //     en: 'Register',
+        //     ru: 'Зарегистрироваться'
+        // }
     };
 
     const handleHamburger = () => {
@@ -128,15 +128,15 @@ const Navbar = () => {
                         </div>
                     </div>
                     {/* sign in */}
-                    <button className='font-poppins cursor-pointer font-medium text-new-color'>
+                    {/* <button className='font-poppins cursor-pointer font-medium text-new-color'>
                         {currentLanguage.text == 'TM' ? navbarData.signIn.tm : (currentLanguage.text == 'EN' ? navbarData.signIn.en : navbarData.signIn.ru)}
-                    </button>
+                    </button> */}
 
                     {/* sign up */}
-                    <button
+                    {/* <button
                         className='font-poppins cursor-pointer font-medium text-white rounded-[10px] py-1 px-3 bg-gradient-to-r from-[#4F9AEB] to-[#007BFF]' onClick={showModal}>
                         {currentLanguage.text == 'TM' ? navbarData.register.tm : (currentLanguage.text == 'EN' ? navbarData.register.en : navbarData.register.ru)}
-                    </button>
+                    </button> */}
 
                     <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null}>
 

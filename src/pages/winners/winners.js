@@ -138,13 +138,6 @@ function Winners() {
                         <AiOutlineRight className='text-white' />
                     </div>
                     <WinnerItem gamer={'Jennet Babayewa'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={gyzyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
-                    <WinnerItem gamer={'Maksat Akmyradow'} photo={photo} place={2} status={yasyl} />
                 </div>
             </div>
         </div>
